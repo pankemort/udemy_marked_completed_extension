@@ -1,22 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "Udemy Video Completer",
-    "version": "1.0",
-    "description": "Mark all Udemy videos as completed.",
-    "permissions": [
-      "activeTab",
-      "scripting"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icons/icon16.png",
-        "48": "icons/icon48.png",
-        "128": "icons/icon128.png"
-      }
+  "manifest_version": 3,
+  "name": "Udemy Auto Completer",
+  "version": "1.0",
+  "description": "Chrome extension to mark Udemy videos as completed.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
     }
   }
-  
+}

@@ -1,56 +1,3 @@
-// function markAllVideos() {
-//     const videoSpans = document.querySelectorAll('span[data-purpose="item-title"]');
-  
-//     let currentIndex = 0;
-  
-//     function markVideo() {
-//       if (currentIndex >= videoSpans.length) {
-//         // alert('All videos marked as completed!');
-//         return;
-//       }
-  
-//       const videoSpan = videoSpans[currentIndex];
-  
-     
-//       videoSpan.click();
-  
-      
-//       setTimeout(() => {
-//         const video = document.querySelector('video');
-  
-//         if (video) {
-         
-//           video.currentTime = video.duration - 1;
-  
-          
-//           const event = new Event('timeupdate');
-//           video.dispatchEvent(event);
-  
-//           video.addEventListener('ended', () => {
-//             console.log(`Video ${video.src} marked as completed`);
-//           });
-  
-//           video.currentTime = video.duration;
-//         }
-
-//         currentIndex++;
-//         setTimeout(markVideo, 4000);
-//       }, 2000); 
-//     }
-  
-//     markVideo();
-//   }
- 
-//   markAllVideos();
-  /////////////////////
-
-
-
-
-
-
-
-  
 let currentSectionIndex = 0;
 let currentVideoIndex = 0;
 const sectionExpandButtonSelector = '.section--flex--B9xUV'; // Selector for section expand buttons
@@ -63,7 +10,7 @@ function expandSection(sectionIndex) {
     console.log('All sections processed!');
     return;
   }
-  
+
   const section = sections[sectionIndex];
   const button = section.querySelector('button');
   if (button) {
@@ -132,9 +79,9 @@ function markItem(itemSpans) {
       console.log(`No video element found for item ${currentVideoIndex + 1}`);
       // If no video element found, move to the next item
       currentVideoIndex++;
-      setTimeout(() => markItem(itemSpans), 4000);
+      setTimeout(() => markItem(itemSpans), 1000);
     }
-  }, 2000); // Adjust this delay based on how long it takes for an item to load
+  }, 7000); // Adjust this delay based on how long it takes for an item to load
 }
 
 // Function to process items in a section
